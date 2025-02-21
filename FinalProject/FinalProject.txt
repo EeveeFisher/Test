@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body{
+        padding: 25px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHoVhOFZxrD5H_C8hBNTee06TyNYWVOrOdFg&s");
+      }
+        
+      .header{
+        height: 100px;
+        background: linear-gradient(45deg, #3494E6, #EC6EAD);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        animation: headerColorShift 5s infinite;
+        
+        
+      }
+      
+      @keyframes headerColorShift {
+        from { background: linear-gradient(45deg, #3494E6, #EC6EAD); }
+        to { background: linear-gradient(45deg, #EC6EAD, #3494E6); }
+      }
+      
+      .gallery {
+      margin:10px;
+      display: flex;
+      justify-content: center;
+      gap:20px;
+      padding: 10px;
+      flex-wrap:wrap;
+      }
+      .image-container {
+        box-shadow: 10px 10px rgba(0,0,0,0.5);
+        position: relative;
+        width: 200px;
+        height:200px;
+        border-radius: 20px;
+        transition: transform 0.3s ease;
+      }
+      .image-container img{
+        width:100%;
+        height:100%;
+      }
+      .image-container:hover img {
+        transform: scale(1.1);
+      }
+      .image-overlay {
+        
+        position: absolute;
+        bottom: 0;
+        right:0;
+        left:0;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        color: white;
+        text-align: center;
+        transition: opacity 0.3s ease;
+        padding: 10px;
+     
+      }
+
+      .image-container:hover .image-overlay {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="header">
+        <h1>Global travel guide</h1>
+      </div>
+      
+      <div class="gallery">
+        <div class="image-container">
+            <a href="https://www.paris.fr/en" target="_blank">
+                <img src="https://assets.onecompiler.app/42txjmm2r/42zd74gcy/Paris.jpeg" alt="Paris">
+                <div class="image-overlay">
+                    <h3>Paris, France</h3>
+                    <p>City of Lights</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="image-container">
+            <a href="https://www.japan.travel/en/" target="_blank">
+                <img src="https://assets.onecompiler.app/42txjmm2r/42zd74gcy/Tokyo.jpeg" alt="Tokyo">
+                <div class="image-overlay">
+                    <h3>Tokyo, Japan</h3>
+                    <p>Modern Metropolis</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="image-container">
+            <a href="https://www.gadventures.com/" target="_blank">
+                <img src="https://assets.onecompiler.app/42txjmm2r/42zd74gcy/Beijing.jpeg" alt="Sydney">
+                <div class="image-overlay">
+                    <h3>Bejing, China</h3>
+                    <p>Magnificent Landscape</p>
+                </div>
+            </a>
+        </div>
+    </div>
+  </body>
+</html>
