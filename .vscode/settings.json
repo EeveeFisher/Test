@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "test/Java",
+        "test",
+        "OA"
+    ]
+}
